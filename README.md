@@ -21,6 +21,9 @@ A modular Inventory & Hotbar system built in C++ and Blueprint for Unreal Engine
 
 ## 🧩 Architecture
 
+- **ActorBase**  
+  - Items world equivalent
+
 - **UInventoryComponent**  
   - Stores and manages item slots  
   - Handles stacking, swapping, usage, notifications
@@ -29,16 +32,15 @@ A modular Inventory & Hotbar system built in C++ and Blueprint for Unreal Engine
   - Icon, display name, max stack  
   - Linked behavior class for item usage
 
-- **UItemUseBase (Polymorphic Item Behavior)**  
-  - Each item triggers different actions  
-  - Example: healing potion increases player HP
-
 - **UInventorySlotWidget**
   - Individual slot UI logic  
   - Drag & Drop + highlight + quantity display
 
 - **UInventoryWidget**
   - Creates & updates Hotbar & Backpack UI
+ 
+ - **GameScreenHUD**
+  - Manage inventory widgets.
 
 
 ## 📌 Technical Highlights
